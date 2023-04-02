@@ -11,7 +11,8 @@ const style = {
   top: "50%",
   left: "50%",
   transform: "translate(-50%, -50%)",
-  maxWith: 900,
+  maxWith: 600,
+  maxHeight: 800,
   bgcolor: "background.paper",
   border: "2px solid #000",
   boxShadow: 24,
@@ -45,14 +46,13 @@ const AddNewProduct = (props) => {
 
   return (
     <Modal
+      sx={{ maxWith: 900 }}
       open={open}
       onClose={() => {
         if (!inputs) {
           props.closeAddProd();
         }
       }}
-      aria-labelledby='modal-modal-title'
-      aria-describedby='modal-modal-description'
     >
       <Box sx={style}>
         <Typography>Add New Product</Typography>
